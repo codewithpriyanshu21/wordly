@@ -1,0 +1,149 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    color: rgb(0, 0, 0);
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.5s;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+    animation: slideIn 0.5s;
+    border-radius: 10px;
+}
+.game-container {
+    text-align: center;
+}
+
+#qwerty-keyboard {
+    display: grid;
+    grid-template-columns: repeat(10, minmax(25px, 1fr)); /* Adjust the column width */
+    grid-gap: 5px;
+    margin-top: 10px;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Add shadow to the keyboard */
+    padding: 10px; /* Add padding to the keyboard */
+    border-radius: 10px;
+    background-color: black; /* Change background color to black */
+}
+
+.keyboard-button {
+    width: 100%;
+    padding: 5px; /* Adjust the padding */
+    font-size: 12px; /* Adjust the font size */
+    border: 1px solid #000;
+    background-color: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    justify-content: center;
+    transition: background-color 0.3s;
+    color: black; /* Change font color to black */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Add shadow to each button */
+}
+
+.keyboard-button:active {
+    background-color: #000000;
+}
+
+#backspace-button {
+    grid-column: span 2; /* Make the backspace button span two columns */
+}
+#submit-button {
+    grid-column: span 2; /* Make the submit button span two columns */
+    background-color: #ccc; /* Change background color of the submit button */
+}
+
+#submit-button:active {
+    background-color: #999; /* Change background color of the submit button when active */
+}
+
+.hint-container {
+    
+    color: #fff;
+    margin-top: 10px;
+    visibility: hidden; /* Hide hint button initially */
+}
+
+.message {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 5px;
+    margin-top: 20px;
+    padding: 10px; /* Add padding to the grid */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Add shadow to the grid */
+    background-color: black;
+    visibility: hidden; /* Hide grid initially */
+}
+
+.grid div {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Add shadow to each box */
+    text-transform: uppercase; /* Transform text to uppercase */
+    color: black; /* Change font color to black */
+}
+
+.grid .cursor {
+    border: 2px solid blue;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-50px); }
+    to { transform: translateY(0); }
+}
+
+.green {
+    color: green;
+}
+
+.yellow {
+    color: yellow;
+}
+
+.red {
+    color: red;
+}

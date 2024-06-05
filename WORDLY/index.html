@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Guessing Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <div id="guidance-modal" class="modal">
+            <div class="modal-content">
+                <h2>How to Play</h2>
+                <p>Guess the 3-letter word in 5 tries.</p>
+                <p class="green">Green: Correct letter in the correct  position.</p>
+                <p class="red">Red: Incorrect letter </p>
+                <p class="yellow">Yellow: Correct letter in the incorrect  position..</p>
+                <button id="start-button">Start Playing</button>
+            </div>
+        </div>
+        <div id="grid" class="grid"></div>
+        <div class="hint-container">
+            <button id="hint-button">Hint</button>
+            <div id="hint"></div>
+        </div>
+        <div id="message" class="message"></div>
+    </div>
+    <div id="result-modal" class="modal">
+        <div class="modal-content">
+            <div id="result-message"></div>
+            
+            <button id="play-again-button">Play Again</button>
+        </div>
+    </div>
+    <div id="qwerty-keyboard">
+        <button class="keyboard-button">Q</button>
+        <button class="keyboard-button">W</button>
+        <button class="keyboard-button">E</button>
+        <button class="keyboard-button">R</button>
+        <button class="keyboard-button">T</button>
+        <button class="keyboard-button">Y</button>
+        <button class="keyboard-button">U</button>
+        <button class="keyboard-button">I</button>
+        <button class="keyboard-button">O</button>
+        <button class="keyboard-button">P</button>
+        <button class="keyboard-button">A</button>
+        <button class="keyboard-button">S</button>
+        <button class="keyboard-button">D</button>
+        <button class="keyboard-button">F</button>
+        <button class="keyboard-button">G</button>
+        <button class="keyboard-button">H</button>
+        <button class="keyboard-button">J</button>
+        <button class="keyboard-button">K</button>
+        <button class="keyboard-button">L</button>
+        <button class="keyboard-button">Z</button>
+        <button class="keyboard-button">X</button>
+        <button class="keyboard-button">C</button>
+        <button class="keyboard-button">V</button>
+        <button class="keyboard-button">B</button>
+        <button class="keyboard-button">N</button>
+        <button class="keyboard-button">M</button>
+        <button class="keyboard-button" id="backspace-button">⌫</button>
+        <button class="keyboard-button" id="submit-button">Submit</button>
+    </div>
+   
+        
+    
+    
+    <footer>
+        <!-- <p>About the Developer</p> -->
+        
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
