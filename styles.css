@@ -34,6 +34,7 @@ body {
     animation: slideIn 0.5s;
     border-radius: 10px;
 }
+
 .game-container {
     text-align: center;
 }
@@ -73,6 +74,7 @@ body {
 #backspace-button {
     grid-column: span 2; /* Make the backspace button span two columns */
 }
+
 #submit-button {
     grid-column: span 2; /* Make the submit button span two columns */
     background-color: #ccc; /* Change background color of the submit button */
@@ -83,7 +85,6 @@ body {
 }
 
 .hint-container {
-    
     color: #fff;
     margin-top: 10px;
     visibility: hidden; /* Hide hint button initially */
@@ -146,4 +147,53 @@ body {
 
 .red {
     color: red;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .modal-content {
+        width: 90%;
+        margin: 20% auto;
+    }
+    
+    #qwerty-keyboard {
+        grid-template-columns: repeat(5, minmax(25px, 1fr));
+        padding: 5px;
+        margin-top: 5px;
+    }
+    
+    .keyboard-button {
+        font-size: 10px;
+        padding: 3px;
+    }
+
+    .grid div {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .modal-content {
+        width: 100%;
+        margin: 25% auto;
+    }
+
+    #qwerty-keyboard {
+        grid-template-columns: repeat(5, minmax(25px, 1fr));
+        padding: 5px;
+        margin-top: 5px;
+    }
+
+    .keyboard-button {
+        font-size: 8px;
+        padding: 2px;
+    }
+
+    .grid div {
+        width: 30px;
+        height: 30px;
+        font-size: 16px;
+    }
 }
